@@ -26,7 +26,14 @@ pipeline
                 
             }
         }
-        
+        stage('variable')
+        {
+            steps
+            {
+                echo "${env.WORKSPACE}"
+                
+            }
+        }
     }
     
     
