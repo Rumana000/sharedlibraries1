@@ -32,7 +32,7 @@ pipeline
             {
                 script
                 {
-                    cicd.newdeploy("${env.JOB_NAME}","172.31.21.41","testapp")
+                    cicd.newdeploy("${env.WORKSPACE}","172.31.21.41","testapp")
                 }
                 
             }
@@ -44,7 +44,7 @@ pipeline
                 script
                 {
                     cicd.newgit("https://github.com/Rumana000/FunctionalTesting.git")
-                    cicd.selenium("${env.JOB_NAME}")
+                    cicd.selenium("${env.WORKSPACE}")
                 }
                 
             }
@@ -55,7 +55,7 @@ pipeline
             {
                 script
                 {
-                    cicd.newdeploy("${env.JOB_NAME}","172.31.20.194","prodapp")
+                    cicd.newdeploy("${env.WORKSPACE}","172.31.20.194","prodapp")
                 }
                 
             }
